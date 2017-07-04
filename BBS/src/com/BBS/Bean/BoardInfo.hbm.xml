@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-25 15:40:45 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.BoardInfo" table="BOARDINFO">
+        <id name="boardId" type="java.lang.Integer">
+            <column name="BOARDID" />
+            <generator class="identity" />
+        </id>
+        <property name="boardName" type="java.lang.String">
+            <column name="BOARDNAME" />
+        </property>
+        <property name="createTime" type="java.lang.String">
+            <column name="CREATETIME" />
+        </property>
+        <property name="boardDesc" type="java.lang.String">
+            <column name="BOARDDESC" />
+        </property>
+        <property name="boardPic" type="java.lang.String">
+            <column name="BOARDPIC" />
+        </property>
+    </class>
+</hibernate-mapping>

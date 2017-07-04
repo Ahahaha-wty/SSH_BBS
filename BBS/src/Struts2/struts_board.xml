@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+  <constant name="struts.action.extension" value="action,do,"></constant>
+  <constant name="struts.multipart.saveDir" value="f:\"></constant>
+	<package name="defalut" namespace="/" extends="struts-default">
+	
+		
+		
+		<!-- 添加板块 -->
+		<action name="addBoardAction" class="boardAction" method="addBoard">
+			<result name="success" type="redirect">adminShowBoardsAction</result>
+			<result name="input">/admin/admin/adminAddBoard.jsp</result>
+			<!-- 定义文件上传拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 设置文件上传大小 -->
+				<param name="maximumSize">409600</param>
+				<!-- 设置文件上传类型 <param name="allowedTypes"> application/vnd.ms-powerpoint 
+					</param> -->
+			</interceptor-ref>
+			<!-- 自定义了拦截器后必手动定义默认的拦截器，否则默认的拦截器不会被执行 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="getBoardsAction" class="boardAction" method="getBoards">
+			<result name="success">/client/success.jsp</result>
+		</action>
+		<action name="getBPagesAction" class="boardAction" method="getPages">
+			<result name="success">/client/boards.jsp</result>
+		</action>
+		<action name="indexBoardAction" class="boardAction" method="getPostPages">
+			<result name="success">/client/board_index.jsp</result>
+		</action>
+		<action name="essencePostAction" class="boardAction" method="getEssencePostPages">
+			<result name="success">/client/essencePost.jsp</result>
+		</action>
+		
+		<action name="showAllBoardPostsAction" class="boardAction" method="moderatorPosts">
+			<result name="success">/admin/moderator/postAllManage.jsp</result>
+		</action>
+		
+		
+		<action name="moUpdateBoardAction" class="boardAction" method="moUpBoardPage">
+			<result name="success">/admin/moderator/moderatorUpBoard.jsp</result>
+		</action>
+		<action name="moUpBoardAction" class="boardAction" method="moUpBoard">
+			<result name="success" type="redirect">moUpdateBoardAction</result>
+		</action>
+		
+		
+		<action name="showAllPostAction" class="boardAction" method="adminPosts">
+			<result name="success">/admin/admin/adminPost.jsp</result>
+		</action>
+		<action name="adminShowBoardsAction" class="boardAction" method="getBoardPages">
+			<result name="success">/admin/admin/adminBoards.jsp</result>
+		</action>
+		<action name="adUpdateBoardAction" class="boardAction" method="adUpBoardPage">
+			<result name="success">/admin/admin/adminUpBoard.jsp</result>
+		</action>
+		<action name="adUpBoardAction" class="boardAction" method="adUpBoard">
+			<result name="success" type="redirect">adminShowBoardsAction</result>
+		</action>
+		<action name="adDeleteBoardAction" class="boardAction" method="adDleteBoard">
+			<result name="success" type="redirect">adminShowBoardsAction</result>
+		</action>
+		<action name="toAddMoPageAction" class="boardAction" method="getBoards">
+			<result name="success"  >/admin/admin/adminAddMo.jsp</result>		
+		</action>
+		<action name="indexAction" class="boardAction" method="indexAction">
+			<result name="success"  >/client/index_main.jsp</result>		
+		</action>
+	<!-- <action name="loginAction" class="loginAction">
+		<result name="success">/index.jsp</result>
+		<result name="false">/error.jsp</result>
+	</action>
+	<action name="loginOutAction" class="loginOutAction">
+		<result name="success">/index.jsp</result>
+	</action>	
+	
+	<action name="CompleteRegisterAction" class="">
+		<result>/success.jsp</result>
+	</action>
+	板块Action
+	<action name="addBoardAction" class="boardAction">
+		<result>/success.jsp</result>
+	</action>
+	<action name="getBoardAction" class="boardAction" method="getBoard">
+		<result>/Section/Board_classifcation.jsp</result>
+	</action>
+	帖子Action
+	<action name="publishAction" class="postAction" method="execute">
+		<result name="success">/user/user_publish.jsp</result>
+	</action>
+	<action name="publishPostAction" class="postAction" method="publish">
+		<result name="success">/success.jsp</result>
+	</action>
+	<action name="getPostAction" class="postAction" method="getPosts">
+		<result name="success">/Section/Board_index.jsp</result>
+	</action> -->
+	
+	</package>
+	
+	<!-- <include file="struts2/struts-person.xml"></include>
+ 	<include file="struts2/struts-invitation.xml"></include>
+ 	<include file="struts2/struts-role.xml"></include>
+ 	<include file="struts2/struts-authority.xml"></include> -->
+</struts>

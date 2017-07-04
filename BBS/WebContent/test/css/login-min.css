@@ -1,0 +1,49 @@
+.forlogin  td{
+line-height: 40px;
+}
+.forlogin table{
+margin:10px auto;
+}
+.forlogin  .firsttr_td{
+text-align:left;
+line-height: 20px
+}
+.forlogin  .lasttr_td{
+text-align:left;
+line-height: 15px
+}
+.inputtext{
+background: url(../images/reg_input_bg.gif) no-repeat top left;
+border-left: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #DDD;
+border-bottom: 1px solid #DDD;
+width: 245px;
+height: 30px;
+font-size: 14px;
+line-height: 30px;
+padding: 0 8px;
+float: left;
+-webkit-transition-property: all;
+-webkit-transition-duration: 0.5s;
+-moz-transition-property: all;
+-moz-transition-duration: 0.5s;
+-o-transition-property: all;
+-o-transition-duration: 0.5s;
+transition-property: all;
+transition-duration: 0.5s;
+}
+.submitbutton {
+background: url(../images/regbtn-split.gif) no-repeat;
+width: 65px;
+height: 29px;
+color: white;
+border: none;
+font-size: 14px;
+clear: both;
+cursor: pointer;
+padding-bottom: 2px;
+}
+.extratr_td{
+text-align:center;
+}

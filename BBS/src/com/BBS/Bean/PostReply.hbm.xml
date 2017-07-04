@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-3 20:56:08 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.PostReply" table="POSTREPLY">
+        <id name="replyId" type="java.lang.Integer">
+            <column name="REPLYID" />
+            <generator class="identity" />
+        </id>
+        <property name="postId" type="java.lang.Integer">
+            <column name="POSTID" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>
+        <property name="replyContent" type="java.lang.String">
+            <column name="REPLYCONTENT" />
+        </property>
+        <property name="replyTime" type="java.lang.String">
+            <column name="REPLYTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

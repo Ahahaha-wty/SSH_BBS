@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-24 21:50:47 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.Message" table="MESSAGE">
+        <id name="messageId" type="java.lang.Integer">
+            <column name="MESSAGEID" />
+            <generator class="identity" />
+        </id>
+        <property name="postId" type="java.lang.Integer">
+            <column name="POSTID" />
+        </property>
+        <property name="postTitle" type="java.lang.String">
+            <column name="POSTTITLE" />
+        </property>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" />
+        </property>
+        <property name="postUsername" type="java.lang.String">
+            <column name="POSTUSERNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

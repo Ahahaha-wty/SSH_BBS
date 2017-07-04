@@ -1,0 +1,176 @@
+html {
+color: #333;
+}
+body, button, input, select, textarea , pre {
+	font-size: 12px;
+	font-family:Arial, "ËÎÌו"
+}
+.grid-96,.grid-70 {
+width: 960px;
+overflow: hidden;
+margin-left:14%;
+padding: 0;
+}
+
+.mod-header .logo {
+margin: 12px 0px 28px 0;
+}
+
+.clearfix {
+zoom: 1;
+}
+.clearfix::after {
+content: ' 20';
+display: block;
+height: 0;
+clear: both;
+}
+.mod-bread {
+ 
+background: url(../images/breadbg.gif) repeat-x;
+height: 46px;
+}
+.mod-bread .bread-left {
+float: left;
+width: 137px;
+height: 46px;
+line-height: 46px;
+font-size: 14px;
+font-weight: bold;
+text-align: right;
+}
+.mod-bread .bread-right {
+float: right;
+height: 46px;
+line-height: 46px;
+padding-right: 20px;
+}
+.regoutter{
+ 
+margin: auto;
+width: 630px;
+height:450px
+}
+.reginner{
+width:100%;
+height:90%;
+ margin:30px auto auto auto;
+}
+.regFooter{
+ 
+margin:20px auto;
+width: 630px;
+text-align: center;
+color: #7A77C8;
+ 
+}
+.inputtext{
+background: url(../images/reg_input_bg.gif) no-repeat top left;
+border-left: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-right: 1px solid #DDD;
+border-bottom: 1px solid #DDD;
+width: 245px;
+height: 30px;
+font-size: 14px;
+line-height: 30px;
+padding: 0 8px;
+float: left;
+-webkit-transition-property: all;
+-webkit-transition-duration: 0.5s;
+-moz-transition-property: all;
+-moz-transition-duration: 0.5s;
+-o-transition-property: all;
+-o-transition-duration: 0.5s;
+transition-property: all;
+transition-duration: 0.5s;
+}
+.codeintext{
+width: 90px;
+}
+.fronttd{
+width:120px;
+text-align: right;
+padding-right: 15px;
+font-size: 14px;
+color:black;
+}
+.reginner  td{
+line-height: 50px;
+}
+.forlogin  td{
+line-height: 40px;
+}
+.submitbutton{
+background: url(../images/regbtn-split.gif) no-repeat;
+width: 109px;
+height: 34px;
+color: white;
+border: none;
+font-size: 14px;
+clear: both;
+display: block;
+cursor: pointer;
+padding-bottom: 2px;
+}
+.logintitle {
+background:#eeeeee;
+width:100%;
+text-align: center;
+font-size: 14px;
+color:black;
+}
+.forlogin table{
+margin:10px auto;
+}
+.forlogin  .firsttd{
+text-align:left;
+line-height: 20px
+}
+.forlogin  .lasttd{
+text-align:left;
+line-height: 15px
+}
+.mod-useragreement {
+padding: 20px 0px 16px 0px;
+line-height: 22px;
+}
+.useragreement-content {
+margin-bottom: 20px;
+}
+h2 {
+display: block;
+font-size: 100%;
+font-size: 14px;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+margin: 0;
+padding: 0;
+}
+ul, ol {
+list-style: none;
+}
+ul, menu, dir {
+display: block;
+ 
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+list-style-type:none;
+}

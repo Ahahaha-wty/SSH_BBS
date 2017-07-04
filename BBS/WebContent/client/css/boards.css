@@ -1,0 +1,66 @@
+<style type="text/css">
+			ul,
+			li {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			h2 {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#content {
+				width: 560px;
+				border: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			#content:hover {
+				border-color: blue;
+			}
+			
+			#content .top {
+				height: 100px;
+				padding: 12px;
+				border-bottom: 1px solid gainsboro;
+				position: relative;
+			}
+			
+			#content .img {
+				/*margin: 12px;*/
+				border: 1px solid gainsboro;
+				position: absolute;
+			}
+			
+			#content .top_right {
+				left: 172px;
+				position: absolute;
+			}
+			
+			#content .top_right p {
+				padding-right: 6px;
+			}
+			
+			#content .bottom {
+				/*height: 70px;*/
+				position: relative;
+			}
+			
+			#content .tip {
+				width: 50px;
+				padding: 4px;
+				left: 0;
+				top: 0;
+				position: absolute;
+			}
+			
+			#content .bottom ul {
+				position: relative;
+				padding: 6px 0 6px 30px;
+				border-left: 1px solid gainsboro;
+				left: 65px;
+				height: 100%;
+			}
+		</style>

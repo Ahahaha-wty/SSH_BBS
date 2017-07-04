@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+	<!-- 注意: 在 IOC 容器中配置 Struts2 的 Action 时, 需要配置 scope 属性, 其值必须为 prototype -->
+	<!-- 注册 -->	
+	<bean id="postService" class="com.BBS.ServiceImp.PostService">
+		<property name="postDao" ref="postDao"></property>
+	</bean>
+	<bean id="postAction" class="com.BBS.Action.PostAction"
+		scope="prototype">
+		<property name="postService" ref="postService"></property>
+		<property name="authorityService" ref="authorityService"></property>
+	</bean>
+	<bean id="postDao" class="com.BBS.DaoImp.PostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean> 
+	
+
+	
+</beans>
+

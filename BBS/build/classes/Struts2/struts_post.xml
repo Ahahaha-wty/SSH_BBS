@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+  <constant name="struts.action.extension" value="action,do,"></constant>
+  <constant name="struts.multipart.saveDir" value="f:\"></constant>
+	<package name="post" namespace="/" extends="struts-default">
+	
+		<action name="publishAction" class="postAction" method="publish">
+			<result name="success" type= "redirect" >indexBoardAction</result>
+			<result name="login" type="redirect">/client/login.jsp</result>
+		</action>
+		<action name="postAction" class="postAction" method="getReplys">
+			<result name="success"  >/client/post.jsp</result>
+<!-- 			<result name="login" type="redirect">/client/login.jsp</result> -->
+		</action>
+		<action name="replyAction" class="postAction" method="reply">
+			<result name="success" type= "chain" >postAction</result>
+			<result name="login" type="redirect">/client/login.jsp</result>
+			
+			<result name="invalid.token" type= "chain">postAction</result>
+			<interceptor-ref name="token"></interceptor-ref>  
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="serchAction" class="postAction" method="serch">
+			<result name="success"  >/client/serch.jsp</result>		
+		</action>
+		<action name="deletePostAction" class="postAction" method="deletePost">
+			<result name="success" type="chain" >showAllBoardPostsAction</result>		
+		</action>
+		<action name="isTopAction" class="postAction" method="isTop">
+			<result name="success" type="redirect" >showAllBoardPostsAction</result>		
+		</action>
+		<action name="isEssenceAction" class="postAction" method="isEssence">
+			<result name="success" type="redirect" >showAllBoardPostsAction</result>		
+		</action>
+		<action name="moSerchPostsAction" class="postAction" method="moderatorSerchPost">
+			<result name="success" type="redirect" >/admin/moderator/moderatorSerchPosts.jsp</result>		
+		</action>
+		<action name="isAdminTopAction" class="postAction" method="isTop">
+			<result name="success" type="redirect" >showAllPostAction</result>		
+		</action>
+		<action name="isAdminEssenceAction" class="postAction" method="isEssence">
+			<result name="success" type="redirect" >showAllPostAction</result>		
+		</action>
+		<action name="adminDeletePostAction" class="postAction" method="deletePost">
+			<result name="success" type="chain" >showAllPostAction</result>		
+		</action>
+		<action name="ownPostAction" class="postAction" method="userPosts">
+			<result name="success"  >/client/userPost.jsp</result>		
+		</action>
+		<action name="userDeletePostAction" class="postAction" method="deletePost">
+			<result name="success" type="chain" >ownPostAction</result>		
+		</action>
+		<action name="messageAction" class="postAction" method="getMessagePage">
+			<result name="success" >/client/message.jsp</result>		
+		</action>
+		<!-- 添加板块 -->
+		<!-- <action name="addBoardAction" class="boardAction" method="addBoard">
+			<result name="success">/client/success.jsp</result>
+			<result name="input">/client/addBoards.jsp</result>
+			定义文件上传拦截器
+			<interceptor-ref name="fileUpload">
+				设置文件上传大小
+				<param name="maximumSize">409600</param>
+				设置文件上传类型 <param name="allowedTypes"> application/vnd.ms-powerpoint 
+					</param>
+			</interceptor-ref>
+			自定义了拦截器后必手动定义默认的拦截器，否则默认的拦截器不会被执行
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="getBoardsAction" class="boardAction" method="getBoards">
+			<result name="success">/client/success.jsp</result>
+		</action>
+		<action name="getBPagesAction" class="boardAction" method="getPages">
+			<result name="success">/client/boards.jsp</result>
+		</action>
+		<action name="indexBoardAction" class="boardAction" method="getPostPages">
+			<result name="success">/client/board_index.jsp</result>
+		</action> -->
+	
+	</package>
+	
+	
+</struts>

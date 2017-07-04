@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-9 17:49:43 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.UserAuthority" table="USERAUTHORITY">
+        <id name="authorityId" type="java.lang.Integer">
+            <column name="AUTHORITYID" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>
+        <property name="publishPostAu" type="java.lang.String">
+            <column name="PUBLISHPOSTAU" />
+        </property>
+        <property name="replyAu" type="java.lang.String">
+            <column name="REPLYAU" />
+        </property>
+    </class>
+</hibernate-mapping>

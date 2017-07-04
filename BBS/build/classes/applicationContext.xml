@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">	
+	
+	
+	<!-- 添加板块 -->
+	<!--  <bean id="boardService" class="com.BBS.ServiceImp.BoardService">
+		<property name="boardDao" ref="boardDao"></property>
+	</bean>
+	<bean id="boardAction" class="com.BBS.Action.BoardAction" scope="prototype">
+		<property name="boardService" ref="boardService"></property>
+	</bean>
+	<bean id="boardDao" class="com.BBS.DaoImp.BoardDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>	
+	</bean> -->
+	<!-- 发帖 -->
+	<!-- <bean id="postService" class="com.BBS.ServiceImp.PostService">
+		<property name="postDao" ref="postDao"></property>
+	</bean>
+	<bean id="postAction" class="com.BBS.Action.PostAction" scope="prototype">
+		<property name="postService" ref="postService"></property>
+	</bean>
+	<bean id="postDao" class="com.BBS.DaoImp.PostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>	
+	</bean> 
+	-->
+	<import resource="Spring/applicationContext_db.xml"/>
+	<import resource="Spring/applicationContext_user.xml"/> 
+	<import resource="Spring/applicationContext_board.xml"/> 
+	<import resource="Spring/applicationContext_post.xml"/> 
+	
+	<!-- hibernate配置 -->
+	<!-- 配置自动扫描的包 -->
+	 <!-- <context:component-scan base-package="com.spring.hibernate"></context:component-scan> -->
+	
+	 
+	
+	<!-- 配置事务管理器 -->
+	<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean> -->
+	<!-- 配置事务属性 需要事务管理器 -->
+	<!-- <tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true"/>
+			<tx:method name="*"/>
+		</tx:attributes>
+	</tx:advice> -->
+	<!-- 配置事务切点  把切点事务关联起来 -->
+	<!-- <aop:config>
+		<aop:pointcut expression="execution(* com.spring.hibernate.service.*.*(..))" 
+		id="txPointcut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+	</aop:config> -->
+	
+	
+<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" 
+destroy-method="close" 
+p:driverClass="com.mysql.jdbc.Driver" 
+p:jdbcUrl="jdbc:mysql:///hibernate5" 
+p:user="root" 
+p:password="root" 
+p:maxPoolSize="40" 
+p:minPoolSize="2" 
+p:maxIdleTime="30">
+</bean>
+
+<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+ p:dataSource-ref="dataSource">
+ 	<property name="annotatedClasses">
+ 		<list>
+ 			<value>com.spring.hibernate5.Book</value>
+ 		</list>
+ 	</property>
+ 	<property name="hibernateProperties">
+ 		<props>
+ 			<prop key="hibernate.dialect">
+ 				org.hibernate.dialect.MySQLInnoDBDialect
+ 			</prop>
+ 			<prop key="hibernate.hbm2ddl.auto">
+ 				update
+ 			</prop>
+ 		</props>
+ 	</property>
+ </bean>	
+<bean id="myDataSource" class="org.springframework.jndi.JndiObjectFactoryBean"
+p:jndiName="java:comp/env/jdbc/myds"></bean> -->
+	
+</beans>

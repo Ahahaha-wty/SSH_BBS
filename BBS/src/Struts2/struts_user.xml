@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+  <constant name="struts.action.extension" value="action,do,"></constant>
+  <constant name="struts.multipart.saveDir" value="f:\"></constant>
+	<package name="default" namespace="/" extends="struts-default">
+	
+		<action name="createImageAction" class="createImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="loginAction" class="loginAction" method="execute">
+			<result name="success" type="redirect">/client/index.jsp</result>
+			<result name="input">/client/login.jsp</result>
+		</action>
+		<action name="registerAction" class="registerAction">
+			<result>/client/completeReg.jsp</result>
+			<result name="input" >/client/register.jsp</result>   
+			
+		</action>
+		
+		
+		<action name="completeRegAction" class="completeRegAction">
+			<result name="success" type="redirect">/client/index.jsp</result>
+			<result name="input">/client/completeReg.jsp</result>
+			<!-- 定义文件上传拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 设置文件上传大小 -->
+				<param name="maximumSize">409600</param>
+				<!-- 设置文件上传类型 <param name="allowedTypes"> application/vnd.ms-powerpoint 
+					</param> -->
+			</interceptor-ref>
+			<!-- 自定义了拦截器后必手动定义默认的拦截器，否则默认的拦截器不会被执行 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="loginAdminAction" class="adminLoginAction"  method="adminLogin">
+			<result name="moderator">/admin/moderator/moderatorIndex.jsp</result>
+			<result name="admin">/admin/admin/adminIndex.jsp</result>
+			<result name="login">/admin/loginAdmin.jsp</result>		
+		</action>
+		<action name="adminLoginOutAction" class="adminLoginAction"  method="adminLoginOut">
+			<result name="success">/admin/loginAdmin.jsp</result>
+		</action>
+		
+		<action name="loginOutAction" class="loginOutAction" >
+			<result name="success" type="redirect">/client/index.jsp</result>		
+		</action>
+		
+		
+		<action name="isForbiddenAction" class="manageUserAction" method="moForbidden">
+			<result name="success" type="redirect" >showMoUserAction</result>		
+		</action>
+		<action name="showMoUserAction" class="manageUserAction" method="moderatorManUsers">
+			<result name="success" type="redirect" >/admin/moderator/moderatorUser.jsp</result>		
+		</action>
+		
+		<action name="adShowAllUserAction" class="manageUserAction" method="adManUsers">
+			<result name="success" type="redirect" >/admin/admin/adminUser.jsp</result>		
+		</action>
+		<action name="adminDeleteUserAction" class="manageUserAction" method="adDeleteUser">
+			<result name="success" type="redirect" >adShowAllUserAction</result>		
+		</action>
+		<action name="isAdminForbiddenAction" class="manageUserAction" method="adForbidden">
+			<result name="success" type="redirect" >adShowAllUserAction</result>		
+		</action>
+		
+		
+		<action name="getMosAction" class="manageUserAction" method="getModerator">
+			<result name="success" type="redirect" >/admin/admin/adminModerator.jsp</result>		
+		</action>
+		<action name="postManAction" class="manageUserAction" method="moPostManAu">
+			<result name="success" type="redirect" >getMosAction</result>		
+		</action>
+		<action name="memManAction" class="manageUserAction" method="moMemManAu">
+			<result name="success" type="redirect" >getMosAction</result>		
+		</action>
+		<action name="boardManAction" class="manageUserAction" method="moBoardManAu">
+			<result name="success" type="redirect" >getMosAction</result>		
+		</action>
+		<action name="adminDeleteMoAction" class="manageUserAction" method="deleteMo">
+			<result name="success" type="redirect" >getMosAction</result>		
+		</action>
+		<action name="adminAddUserAction" class="manageUserAction" method="addMem">
+			<result name="success" type="redirect" >/admin/admin/adminAddUser.jsp</result>	
+			<result name="input">/admin/admin/adminAddUser.jsp</result>	
+		</action>
+		<action name="updateUserInfoAction" class="completeRegAction" method="updateUserInfo">
+			<result name="success" type="redirect" >/client/userInfo.jsp</result>
+			<result name="input" type="redirect" >/client/userInfo.jsp</result>
+			<interceptor-ref name="fileUpload">
+				<!-- 设置文件上传大小 -->
+				<param name="maximumSize">409600</param>
+				<!-- 设置文件上传类型 <param name="allowedTypes"> application/vnd.ms-powerpoint 
+					</param> -->
+			</interceptor-ref>
+			<!-- 自定义了拦截器后必手动定义默认的拦截器，否则默认的拦截器不会被执行 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>		
+		</action>
+		<action name="addMoAction" class="manageUserAction" method="addModerator">
+			<result name="success" type="redirect" >getMosAction</result>
+			<result name="input">/admin/admin/adminAddMo.jsp</result>			
+		</action>
+		<action name="adminAddMessageAction" class="manageUserAction" method="adminAddMessage">
+			<result name="success" type="redirect" >/admin/admin/adminIndex.jsp</result>			
+		</action>
+	<!-- <action name="loginAction" class="loginAction">
+		<result name="success">/index.jsp</result>
+		<result name="false">/error.jsp</result>
+	</action>
+	<action name="loginOutAction" class="loginOutAction">
+		<result name="success">/index.jsp</result>
+	</action>	
+	
+	<action name="CompleteRegisterAction" class="">
+		<result>/success.jsp</result>
+	</action>
+	板块Action
+	<action name="addBoardAction" class="boardAction">
+		<result>/success.jsp</result>
+	</action>
+	<action name="getBoardAction" class="boardAction" method="getBoard">
+		<result>/Section/Board_classifcation.jsp</result>
+	</action>
+	帖子Action
+	<action name="publishAction" class="postAction" method="execute">
+		<result name="success">/user/user_publish.jsp</result>
+	</action>
+	<action name="publishPostAction" class="postAction" method="publish">
+		<result name="success">/success.jsp</result>
+	</action>
+	<action name="getPostAction" class="postAction" method="getPosts">
+		<result name="success">/Section/Board_index.jsp</result>
+	</action> -->
+	
+	</package>
+	
+	<!-- <include file="struts2/struts-person.xml"></include>
+ 	<include file="struts2/struts-invitation.xml"></include>
+ 	<include file="struts2/struts-role.xml"></include>
+ 	<include file="struts2/struts-authority.xml"></include> -->
+</struts>

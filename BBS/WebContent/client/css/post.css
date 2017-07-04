@@ -1,0 +1,135 @@
+<style>
+			.a {
+				background-color: white;
+			}
+			
+			.a:hover {
+				background-color: #fcfcfc;
+			}
+			
+			a {
+				padding: 0;
+				color: blue;
+			}
+			
+			h3,
+			p {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.clear {
+				zoom: 1;
+			}
+			
+			.clear:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			.talker {
+				position: relative;
+				width: 700px;
+				/*height: 320px;*/
+				border: 1px solid #e1e5e7;
+			}
+			
+			.left {
+				height: 100px;
+				padding: 20px;
+				float: left;
+			}
+			
+			.left img {
+				border: 1px solid #cdcdcd;
+			}
+			
+			.name {
+				margin-top: 0px;
+				color: #efb06d;
+				font-size: 14px;
+			}
+			
+			.level {
+				width: 60px;
+				height: 10px;
+				margin-top: 0px;
+				border: 1px solid #e1e5e7;
+				padding: 8px;
+				color: #4c4c4c;
+				line-height: 10px;
+			}
+			
+			.right {
+				height: 100px;
+				padding: 20px;
+			}
+			
+			.tip {
+				position: relative;
+				float: right;
+				padding: 10px;
+			}
+			
+			a,
+			input,
+			button {
+				padding: 0;
+				margin: 0;
+			}
+			
+			button {
+				background: white;
+				border: 1px solid #e8eae8;
+				width: 80px;
+				height: 25px;
+				font-size: 10pt;
+				cursor: pointer;
+			}
+			
+			a:hover {
+				color: black;
+			}
+			
+			#page {
+				/*width: 0px;*/
+				height: 16px;
+				background: #f5f7fb;
+				padding: 18px;
+			}
+			
+			#page a {
+				color: blue;
+				padding: 10px;
+			}
+			
+			#page a:visited {
+				color: gray;
+			}
+			
+			#page a:hover {
+				color: cornflowerblue
+			}
+			
+			#page input {
+				width: 38px;
+				height: 25px;
+			}
+			
+			.talker_tips {
+				padding: 23px;
+				border: 1px solid #e5e6e5;
+				position: relative;
+			}
+			
+			.talker_tips .btn {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+			}
+			
+			.talker_tips .btn button {
+				margin-right: 12px;
+			}
+		</style>

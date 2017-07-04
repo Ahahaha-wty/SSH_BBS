@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-26 14:51:27 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.Post" table="POST">
+        <id name="postId" type="java.lang.Integer">
+            <column name="POSTID" />
+            <generator class="identity" />
+        </id>
+        <property name="boardId" type="java.lang.Integer">
+            <column name="BOARDID" />
+        </property>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="publishTime" type="java.lang.String">
+            <column name="PUBLISHTIME" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" />
+        </property>
+        <property name="postPeople" type="java.lang.String">
+            <column name="POSTPEOPLE" />
+        </property>
+        <property name="browseTime" type="java.lang.Integer">
+            <column name="BROWSETIME" />
+        </property>
+        <property name="replyTime" type="java.lang.Integer">
+            <column name="REPLYTIME" />
+        </property>
+        <property name="isTop" type="java.lang.Integer">
+            <column name="ISTOP" />
+        </property>
+        <property name="isessence" type="java.lang.Integer">
+            <column name="ISESSENCE" />
+       	</property>
+    </class>
+</hibernate-mapping>

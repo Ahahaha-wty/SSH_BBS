@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-6 12:26:30 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.UserInformation" table="USERINFORMATION">
+        <id name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+            <generator class="assigned">
+            	
+            </generator>
+        </id>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="sex" type="java.lang.Integer">
+            <column name="SEX" />
+        </property>
+        <property name="birthday" type="java.lang.String">
+            <column name="BIRTHDAY" />
+        </property>
+        <property name="nativePlace" type="java.lang.String">
+            <column name="NATIVEPLACE" />
+        </property>
+        <property name="qq" type="java.lang.String">
+            <column name="QQ" />
+        </property>
+        <property name="selfInfo" type="java.lang.String">
+            <column name="SELFINFO" />
+        </property>
+        <property name="psersonalIsign" type="java.lang.String">
+            <column name="PSERSONALISIGN" />
+        </property>
+        <property name="postNum" type="java.lang.Integer">
+            <column name="POSTNUM" />
+        </property>
+        <property name="headAdd" type="java.lang.String">
+            <column name="HEADADD" />
+        </property>
+        <property name="registTime" type="java.lang.String">
+            <column name="REGISTTIME" />
+        </property>
+        <property name="leavl" type="java.lang.Integer">
+            <column name="LEAVL" />
+        </property>
+        <property name="levelIntegral" type="java.lang.Integer">
+            <column name="LEVELINTEGRAL" />
+        </property>
+         
+    </class>
+</hibernate-mapping>

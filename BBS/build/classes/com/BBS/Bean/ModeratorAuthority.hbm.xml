@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-10 16:41:41 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.BBS.Bean.ModeratorAuthority" table="MODERATORAUTHORITY">
+        <id name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="authorityId" type="java.lang.Integer">
+            <column name="AUTHORITYID" />
+        </property>
+        <property name="postManageAu" type="java.lang.String">
+            <column name="POSTMANAGEAU" />
+        </property>
+        <property name="memberManageAu" type="java.lang.String">
+            <column name="MEMBERMANAGEAU" />
+        </property>
+        <property name="boardManageAu" type="java.lang.String">
+            <column name="BOARDMANAGEAU" />
+        </property>
+        <property name="boardId" type="java.lang.Integer">
+            <column name="BOARDID" />
+        </property>
+    </class>
+</hibernate-mapping>

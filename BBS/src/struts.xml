@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+  <constant name="struts.action.extension" value="action,do,"></constant>
+	<!--<package name="default" namespace="/" extends="struts-default">
+		
+	 <action name="loginAction" class="loginAction">
+		<result name="success">/index.jsp</result>
+		<result name="false">/error.jsp</result>
+	</action>
+	<action name="loginOutAction" class="loginOutAction">
+		<result name="success">/index.jsp</result>
+	</action>	
+	<action name="registerAction" class="registerAction">
+			<result>/success.jsp</result>
+	</action>
+	<action name="CompleteRegisterAction" class="">
+		<result>/success.jsp</result>
+	</action>
+	板块Action
+	<action name="addBoardAction" class="boardAction">
+		<result>/success.jsp</result>
+	</action>
+	<action name="getBoardAction" class="boardAction" method="getBoard">
+		<result>/Section/Board_classifcation.jsp</result>
+	</action>
+	帖子Action
+	<action name="publishAction" class="postAction" method="execute">
+		<result name="success">/user/user_publish.jsp</result>
+	</action>
+	<action name="publishPostAction" class="postAction" method="publish">
+		<result name="success">/success.jsp</result>
+	</action>
+	<action name="getPostAction" class="postAction" method="getPosts">
+		<result name="success">/Section/Board_index.jsp</result>
+	</action>
+	</package> -->
+	<include file="Struts2/struts_user.xml"></include>
+	<include file="Struts2/struts_board.xml"></include>
+	<include file="Struts2/struts_post.xml"></include>
+	<!-- <include file="Struts2/struts_authority.xml"></include> -->
+	
+	
+	<!-- <include file="struts2/struts-person.xml"></include>
+ 	<include file="struts2/struts-invitation.xml"></include>
+ 	<include file="struts2/struts-role.xml"></include>
+ 	<include file="struts2/struts-authority.xml"></include> -->
+</struts>

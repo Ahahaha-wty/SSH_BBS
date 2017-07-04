@@ -1,0 +1,155 @@
+
+/* CSS Document */
+
+.head{
+	height:30px;
+	background-image:url(../images/bk_top.png);
+	margin-top:-0px;
+	margin-left:-10px;
+	margin-right:-10px;
+	margin-bottom:5px;
+	}
+.inhead{
+	width:960px;
+	height:30px;
+	margin:0px auto;
+	line-height:30px;
+	}
+.inheadleft{
+	height:30px;
+	width:400px;
+	float:left;
+	text-align:left;
+	}
+.inheadright{
+	height:30px;
+	width:200px;
+	float:right;
+	text-align:right;
+	}
+.logo{
+	width:960px;
+	height:140px;
+	margin:0px auto;
+	}
+.logoLeft{
+	width:300px;
+	height:60px;
+	float:left;
+   }
+.logoRight{
+	width:300px;
+	height:60px;
+	float:right;
+	text-align:left;
+		}
+.daohang{
+	width:960px;
+	height:35px;
+	margin:0px auto;
+	line-height:35px;
+	background:url(../images/centery.png);
+	margin-bottom:5px;
+	margin-top:5px;
+	}
+.content{
+	width:960px;
+	height:400px;
+    margin:0px auto;
+	}
+.lcontent{
+	width:596px;
+	height:400px;
+	float:left;
+	border-style:solid;
+	border-color:#999;
+	border-width:1px;
+	}
+.rcontent{
+	width:358px;
+	height:400px;
+	float:right;
+	border-style:solid;
+	border-color:#999;
+	border-width:1px;
+	}
+.location{
+	height:40px;
+	width:580px;
+	margin:0px auto;
+	border-style:solid;
+	border-top-width:0px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-bottom-width:1px;
+	border-color:#999;
+	line-height:40px;
+	font-size:18px;
+	color:#00C;
+	}
+.location_Info{
+	width:580px;
+	margin:0px auto;
+	height:40px;
+	}
+li {
+    text-decoration: none;
+    float: left;
+    list-style-type: none;
+	margin-left:20px;
+	line-height:20px;
+	font-size:14px;
+}
+.fenlei-l{
+	width:60px;
+	height:40px;
+	color:#00C;
+	font-size:14px;
+	font-weight:bold;
+	float:left;
+	margin-left:8px;
+	text-align:right;
+	line-height:55px;
+	}
+.fenlei-r{
+	width:480px;
+	height:40px;
+	float:left;
+	}
+.bottom{
+	width:960px;
+	height:400px;
+	margin:0px auto;
+	margin-top:15px;
+	border-bottom-width:2px;
+	border-top-width:2px;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-style:solid;
+	border-color:#00F;
+	}
+.bottom_Info{
+	width:960px;
+	line-height:20px;
+	font-size:12px;
+	margin:0px auto;
+	margin-top:15px;
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	border-color:#CCC;
+	}
+.sousuo{
+	width:960px;
+	text-align:left;
+	line-height:10px;
+	margin:0px auto;
+	}
+.neirong{
+	width:960px;
+	text-align:left;
+	line-height:10px;
+	margin:0px auto;
+	
+
+	}
